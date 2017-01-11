@@ -19,9 +19,9 @@ Page({
     //获取屏幕高度 
     wx.getSystemInfo({ 
       success: function (res) { 
-      that.setData({ 
-      windowHeight: res.windowHeight 
-      })  
+        that.setData({ 
+          windowHeight: res.windowHeight 
+       })  
       } 
     })
 

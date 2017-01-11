@@ -38,6 +38,8 @@
     margin: 20rpx;
     color: white;
     font-size: 24rpx;
+    height:24rpx;
+    width:85%;
 }
 
 
