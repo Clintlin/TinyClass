@@ -1,0 +1,11 @@
+.scrollView {
+    margin-top: 0px;
+    margin-left: 20px;
+    width: 90%;
+}
+
+.blockView{
+    height: 210px;
+    padding-bottom: 20px;
+}
+

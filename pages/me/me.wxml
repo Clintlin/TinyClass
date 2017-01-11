@@ -1,0 +1,45 @@
+<!--pages/me/me.wxml-->
+
+
+<view class="container">
+    <image class="userinfo-avatar-blur" src="{{userInfo.avatarUrl}}">
+    </image>
+
+<button class="userInfoEdit" bindtap="toEditPage">编辑资料</button>
+
+<view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="userinfo-userIdentifiter">{{userIdentifiter}}</text>
+    <text class="userinfo-userDescription">{{userDescription}}</text>
+
+</view>
+
+<!--scroll view-->
+<scroll-view class="classes" scroll-y="true" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+    <block wx:for="{{classes}}" wx:for-item="class" wx:key="*this">
+
+        <view class="class-item">
+
+            <image class="class-cover" src="{{class.cover}}"></image>
+            <text class="class-title">{{class.title}}</text>
+            <text class="class-subtitle">{{class.subtitle}}</text>
+
+            <text class="class-detail">共{{class.course}}期|{{class.students}}人学习</text>
+        </view>
+
+
+
+    </block>
+
+
+</scroll-view>
+
+
+</view>
+
+
+
+
+
