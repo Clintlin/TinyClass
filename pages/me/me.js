@@ -64,7 +64,7 @@ Page({
 ////
   toEditPage:function(){
      wx.navigateTo({
-      url: '/userInfoEdit/userInfoEdit'
+      url: '../me/userInfoEdit/userInfoEdit'
     })
   },
 
