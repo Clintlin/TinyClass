@@ -35,21 +35,23 @@
 }
 
 .userinfo-userDescription{
-    margin: 20rpx;
+    margin: 0rpx -20rpx 20px 0;
     color: white;
     font-size: 24rpx;
-    height:24rpx;
-    width:85%;
+    width:84%;
+    text-overflow : ellipsis;
+    /*border-radius: 4px;*/
 }
 
 .userInfo-ExtensionButton {
     position: absolute;
-    margin-top: 280rpx;
-    margin-left: 340rpx;
+    margin-top:284rpx;
+    margin-left:336rpx;
+
     width: 44rpx;
     height: 44rpx;
     border-width: 0rpx;
-    background: none;
+    background-color:rgba(0, 0, 0, 0.0);
     line-height:24px;
     color: white;
     font-size: 24rpx;

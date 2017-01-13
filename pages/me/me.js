@@ -28,6 +28,15 @@ var classesData = {
 //获取应用实例
 var app = getApp()
 
+
+
+var defaultDescriptionTextStyle = {
+      height : "8rpx",
+      followY : "hidden",
+      backgroundColor: "rgba(0, 0, 0, 0.0)",
+      padding : "20rpx"
+    };
+
 Page({
   data:{
     userInfo: {},
@@ -37,10 +46,13 @@ Page({
 
     isNeedToShowButton:false,
     isFullDescShowing:false,
-    userDescriptionTextStyleY : "hidden",
-    userDescriptionTextStyleOverflow : "ellipsis",
+
+    descriptionTextStyle : defaultDescriptionTextStyle,
     extensionButtonImageSrc : "../../image/content-closed.png"
   },
+
+
+
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
     var that = this
@@ -77,16 +89,22 @@ Page({
 
   showBtnOnClicked:function(e){
       var that = this;
-      var str = "hidden"
+      var userDescStyle = that.data.descriptionTextStyle;
       var imageSrc = "../../image/content-closed.png";
-      if (that.data.isNeedToShowButton && that.data.userDescriptionTextStyleY == "hidden") {
-        str = "visible";
+       
+      if (that.data.isNeedToShowButton && that.data.descriptionTextStyle.followY == "hidden") {
+        userDescStyle.followY = "visible";
         imageSrc =  "../../image/content-opening.png";
+         userDescStyle.height = "auto";
+         userDescStyle.backgroundColor = "rgba(0, 0, 0, 0.7)";
+         userDescStyle.padding = "20px 120rpx 20px 20px";
+      }else{
+        userDescStyle = defaultDescriptionTextStyle;
       }
 
       that.setData({
-          userDescriptionTextStyleY : str,
-          extensionButtonImageSrc :  imageSrc
+        descriptionTextStyle    :   userDescStyle,
+        extensionButtonImageSrc :   imageSrc
       })
   },
 

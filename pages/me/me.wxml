@@ -11,7 +11,7 @@
     <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     <text class="userinfo-userIdentifiter">{{userIdentifiter}}</text>
-    <text class="userinfo-userDescription" style="overflow-y:{{userDescriptionTextStyleY}};text-overflow:{{userDescriptionTextStyleOverflow}}" id="userDescription">{{userDescription}}</text>
+    <text class="userinfo-userDescription" style="overflow-y:{{descriptionTextStyle.followY}};height:{{descriptionTextStyle.height}};background-color:{{descriptionTextStyle.backgroundColor}};padding:{{descriptionTextStyle.padding}}" id="userDescription">{{userDescription}}</text>
     <image class="userInfo-ExtensionButton" src="{{extensionButtonImageSrc}}"  bindtap="showBtnOnClicked" wx:if="{{isNeedToShowButton}}"></image>
 </view>
 
