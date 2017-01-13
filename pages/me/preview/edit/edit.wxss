@@ -1,0 +1,14 @@
+/* pages/me/preview/edit/edit.wxss */
+
+.defaultElement {
+    width:auto;
+    margin:20rpx;
+}
+
+.textView {
+    margin:20rpx;
+}
+
+.saveButton {
+    margin:20rpx;
+}

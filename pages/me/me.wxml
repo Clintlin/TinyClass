@@ -5,14 +5,14 @@
     <image class="userinfo-avatar-blur" src="{{userInfo.avatarUrl}}">
     </image>
 
-<button class="userInfoEdit" bindtap="toEditPage">编辑资料</button>
+<button class="userInfoEdit" bindtap="toUserInfoPreviewPage">编辑资料</button>
 
 <view class="userinfo">
     <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     <text class="userinfo-userIdentifiter">{{userIdentifiter}}</text>
-    <text class="userinfo-userDescription" style="overflow-y:{{isFullDescShowing}}">{{userDescription}}</text>
-    <button class="userInfoEdit" bindtap="showBtnOnClicked" wx:if="{{isNeedToShowButton}}">展开</button>
+    <text class="userinfo-userDescription" style="overflow-y:{{userDescriptionTextStyleY}};text-overflow:{{userDescriptionTextStyleOverflow}}" id="userDescription">{{userDescription}}</text>
+    <image class="userInfo-ExtensionButton" src="{{extensionButtonImageSrc}}"  bindtap="showBtnOnClicked" wx:if="{{isNeedToShowButton}}"></image>
 </view>
 
 <!--scroll view-->

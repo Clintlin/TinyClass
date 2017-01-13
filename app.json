@@ -5,7 +5,8 @@
     "pages/canvas/canvas",
     "pages/documents/documents",
     "pages/me/me",
-    "pages/me/userInfoEdit/userInfoEdit"
+    "pages/me/preview/preview",
+    "pages/me/preview/edit/edit"
   ],
   "window":{
     "backgroundTextStyle":"light",

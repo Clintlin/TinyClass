@@ -1,0 +1,6 @@
+<!--pages/me/preview/edit/edit.wxml-->
+<textarea cols="28" class="defaultElement" bindinput="textareaValueChanged" value="{{content}}"/>
+
+
+
+<button class="defaultElement" bindtap="saveContent">保存</button>

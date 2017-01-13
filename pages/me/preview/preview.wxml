@@ -1,0 +1,54 @@
+<!--pages/me/preview/preview.wxml-->
+
+
+<view style="background:#F6F7F9; height:{{windowHeight}}px">
+
+
+
+
+
+<view class="my">
+    <view class="my-item flex-wrp">
+      <view class="disable myitem-name flex-item ">
+        <text>头像</text>
+         <image class="avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp">
+      <view class="disable myitem-name flex-item">
+        <text>名字</text>
+        <text class="userInfo-float-right disable">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    
+
+    <view class="my-item flex-wrp" bindtap="editInfo" id="identifiter">
+      <view class="myitem-name flex-item">
+        <text>职业身份</text>
+        <image class="arrow" src="{{userInfo.avatarUrl}}"></image>
+        <text class="userInfo-float-right disable rightGap">{{userIdentifiter}}</text>
+        
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp"  bindtap="editInfo" id="description">
+      <view class="myitem-name flex-item">
+        <text>个人简介</text>
+        <image class="arrow" src="{{userInfo.avatarUrl}}"></image>
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp"  bindtap="editInfo" id="mobile">
+      <view class="myitem-name flex-item">
+        <text>手机号</text>
+        <image class="arrow" src="{{userInfo.avatarUrl}}"></image>
+        <text class="userInfo-float-right disable rightGap">{{userMobliePhone}}</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+  </view>
